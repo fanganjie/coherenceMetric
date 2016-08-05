@@ -82,8 +82,13 @@ public class metric {
     public static void main(String[] args) {
         csvLib csvlib = new csvLib();
 
+//      input folder
         String folder = args[1];
+
+//      the output res path (full)
         String des = args[2];
+
+//      the path of twitter.we
         metric m = new metric(args[0]);
         m.setStemmed(true);
 
@@ -97,7 +102,6 @@ public class metric {
         }
 
         System.out.println("Results saved in: " + des);
-
         csvlib.closeWriters();
 
     }
